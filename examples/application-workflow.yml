@@ -1,0 +1,14 @@
+name: Sailfish package
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  rpm:
+    uses: imaxeon-anik/sfos-build-env/.github/workflows/build-rpm.yml@REPLACE_WITH_FULL_COMMIT_SHA
+    with:
+      recipe-ref: REPLACE_WITH_FULL_COMMIT_SHA
+    secrets:
+      BUILD_ENV_READ_TOKEN: ${{ secrets.BUILD_ENV_READ_TOKEN }}

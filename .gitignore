@@ -1,0 +1,14 @@
+out/
+build/
+.env
+.env.*
+!.env.example
+*.rpm
+*.run
+*.qcow2
+*.utm/
+*.vdi
+*.vmdk
+*.pem
+*.key
+.DS_Store
